@@ -14,8 +14,9 @@ public static void main(String[] args) {
 		    System.out.println("2. Subtraction \n");
 		    System.out.println("3. Multiplication \n");
 		    System.out.println("4. Division \n");
+			System.out.println("5. Power \n");
 		   
-		    System.out.println("5. Quit \n");
+		    System.out.println("6. Quit \n");
 		    System.out.println("Enter your choice : ");
 		    ch = sc.nextInt();
 		    
@@ -53,16 +54,37 @@ public static void main(String[] args) {
 		    		System.out.println(num1 + " / " + num2 + " = " + res);
 		    		break;
 		    		
-		
-		    case 5:
+		 case 5:
+		    	
+		    	System.out.println("Enter the base and exponent : ");
+				int base = sc.nextInt();
+				int expo = sc.nextInt();
+				res = Power(base, expo);
+				System.out.println("Power = " +res);
+				break;
+		    case 6:
 		    		break;
 
 		      default:
 		        System.out.println("Invalid choice!!");
 		        break;
 		    }
-	    }while(ch != 5);
+	    }while(ch != 6);
 	    
 	    sc.close();
 	}
+	public static Double Power(int x,int y)
+{
+  
+    	int res=1;
+    	while(x!=0)
+    	{
+    		res=res * y;
+    		--x;
+    	}
+    	System.out.println(" power of number = "+res);
+		return null;
+    	
+
+}
 }
